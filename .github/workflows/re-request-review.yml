@@ -1,0 +1,13 @@
+name: Request/Re-request Review on PR Activity
+
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review, synchronize]
+
+jobs:
+  re-request-review:
+    permissions: write-all
+    uses: BildauDigital/workflows/.github/workflows/re-request-review.yml@main
+    with:
+      team_slug: csp-reviewers
+    secrets: inherit
