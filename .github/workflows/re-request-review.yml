@@ -7,7 +7,7 @@ on:
 jobs:
   re-request-review:
     permissions: write-all
-    uses: BildauDigital/workflows/.github/workflows/re-request-review.yml@main
+    uses: BildauDigital/workflows/.github/workflows/re-request-review.yml@latest
     with:
       team_slug: csp-reviewers
     secrets: inherit
